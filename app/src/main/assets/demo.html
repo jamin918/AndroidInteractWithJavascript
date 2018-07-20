@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>提供给Android端调用的方法</title>
+
+    <script>
+
+            function callJS() {
+                alert("js端调用了CallJS方法!");
+            }
+
+            function sayHello() {
+                // 调用android端声明的方法
+                test.sayHello("Hello, this is javascript!");
+            }
+
+            // 用于接收android返回的结果
+            function returnResult(result) {
+                alert("js端收到android端的返回数据："+result);
+            }
+
+    </script>
+
+</head>
+
+<body>
+
+<br/>
+<input type='button' onclick='callJS()' value="点击调用JavaScript端方法"/>
+<br/>
+<br/>
+
+<input type='button' onclick='sayHello()' value="点击调用Android端方法"/>
+
+</body>
+
+</html>
